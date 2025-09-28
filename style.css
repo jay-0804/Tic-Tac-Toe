@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-align:center;
+    background-color:olive;
+}
+body{
+    text-align:center;
+}
+
+#container{
+    height:60vh;
+    
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+#game{
+    height:36vmin;
+    width:40vmin;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items:center;
+    gap:1.5vmin;
+}
+
+.box{
+    height:12vmin;
+    width:12vmin;
+    gap:10;
+    color:beige;
+    border-color:beige;
+    border-radius:10px;
+}
+#reset{
+    height: 50px;
+    width: 100px;
+    border-radius: 5px;
+}
