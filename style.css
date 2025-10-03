@@ -1,40 +1,77 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    text-align:center;
-    background-color:olive;
-}
-body{
-    text-align:center;
+    text-align: center;
+    background-color: #0a0a0a; /* dark background for glow */
+    font-family: 'Segoe UI', sans-serif;
+    color: #0ff; /* default neon cyan text */
 }
 
-#container{
-    height:60vh;
-    
-    display:flex;
-    justify-content:center;
-    align-items:center;
+body {
+    text-align: center;
 }
-#game{
-    height:36vmin;
-    width:40vmin;
-    display:flex;
+
+/* Container */
+#container {
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Game board */
+#game {
+    height: 36vmin;
+    width: 40vmin;
+    display: flex;
     flex-wrap: wrap;
-    justify-content:center;
-    align-items:center;
-    gap:1.5vmin;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+    background-color: transparent;
 }
 
-.box{
-    height:12vmin;
-    width:12vmin;
-    gap:10;
-    color:beige;
-    border-color:beige;
-    border-radius:10px;
+/* Tic Tac Toe boxes */
+.box {
+    height: 12vmin;
+    width: 12vmin;
+    background-color: #111; /* dark box */
+    border: 2px solid #0ff;
+    border-radius: 10px;
+    color: #f0f0f0;
+    font-size: 2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px #0ff, 0 0 20px #0ff inset;
 }
-#reset{
+
+/* Glow effect on hover */
+.box:hover {
+    background-color: #222;
+    box-shadow: 0 0 15px #ff00ff, 0 0 25px #00ffff inset;
+    transform: scale(1.05);
+}
+
+/* Reset button */
+#reset {
     height: 50px;
-    width: 100px;
-    border-radius: 5px;
+    width: 120px;
+    border-radius: 8px;
+    border: none;
+    background: linear-gradient(135deg, #ff00ff, #00ffff);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px #ff00ff, 0 0 15px #00ffff;
 }
+
+/* Button glow on hover */
+#reset:hover {
+    box-shadow: 0 0 20px #ff00ff, 0 0 30px #00ffff;
+    transform: scale(1.1);
+}
+
